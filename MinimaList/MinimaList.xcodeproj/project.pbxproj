@@ -7,27 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		57D8F74C2374CA2200D38CB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D8F74B2374CA2200D38CB1 /* AppDelegate.swift */; };
-		57D8F74E2374CA2200D38CB1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D8F74D2374CA2200D38CB1 /* SceneDelegate.swift */; };
-		57D8F7532374CA2200D38CB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57D8F7512374CA2200D38CB1 /* Main.storyboard */; };
-		57D8F7562374CA2200D38CB1 /* MinimaList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 57D8F7542374CA2200D38CB1 /* MinimaList.xcdatamodeld */; };
-		57D8F7582374CA2400D38CB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57D8F7572374CA2400D38CB1 /* Assets.xcassets */; };
-		57D8F75B2374CA2400D38CB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57D8F7592374CA2400D38CB1 /* LaunchScreen.storyboard */; };
+		36685826239FBFAD00346A56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36685825239FBFAD00346A56 /* AppDelegate.swift */; };
+		36685828239FBFAD00346A56 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36685827239FBFAD00346A56 /* SceneDelegate.swift */; };
+		3668582D239FBFAD00346A56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3668582B239FBFAD00346A56 /* Main.storyboard */; };
+		36685830239FBFAD00346A56 /* Minimalist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3668582E239FBFAD00346A56 /* Minimalist.xcdatamodeld */; };
+		36685832239FBFAF00346A56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36685831239FBFAF00346A56 /* Assets.xcassets */; };
+		36685835239FBFAF00346A56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36685833239FBFAF00346A56 /* LaunchScreen.storyboard */; };
+		3668583F239FC1E600346A56 /* ListeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3668583E239FC1E600346A56 /* ListeTableViewController.swift */; };
+		36874FA323A000C3009C7FE4 /* CompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36874FA223A000C3009C7FE4 /* CompleteViewController.swift */; };
+		36874FA523A00290009C7FE4 /* TaskToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36874FA423A00290009C7FE4 /* TaskToDoTableViewController.swift */; };
+		36B1E049239FCE2700711016 /* TaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B1E048239FCE2700711016 /* TaskTableViewController.swift */; };
+		36B1E04B239FD14200711016 /* ListStaticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B1E04A239FD14200711016 /* ListStaticTableViewCell.swift */; };
+		36B1E070239FECCD00711016 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B1E06F239FECCD00711016 /* TaskViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		57D8F7482374CA2200D38CB1 /* MinimaList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MinimaList.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		57D8F74B2374CA2200D38CB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		57D8F74D2374CA2200D38CB1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		57D8F7522374CA2200D38CB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		57D8F7552374CA2200D38CB1 /* MinimaList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MinimaList.xcdatamodel; sourceTree = "<group>"; };
-		57D8F7572374CA2400D38CB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		57D8F75A2374CA2400D38CB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		57D8F75C2374CA2400D38CB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36685822239FBFAD00346A56 /* Minimalist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Minimalist.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		36685825239FBFAD00346A56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		36685827239FBFAD00346A56 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3668582C239FBFAD00346A56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3668582F239FBFAD00346A56 /* Minimalist.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Minimalist.xcdatamodel; sourceTree = "<group>"; };
+		36685831239FBFAF00346A56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		36685834239FBFAF00346A56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		36685836239FBFAF00346A56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3668583E239FC1E600346A56 /* ListeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListeTableViewController.swift; sourceTree = "<group>"; };
+		36874FA223A000C3009C7FE4 /* CompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteViewController.swift; sourceTree = "<group>"; };
+		36874FA423A00290009C7FE4 /* TaskToDoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskToDoTableViewController.swift; sourceTree = "<group>"; };
+		36B1E048239FCE2700711016 /* TaskTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewController.swift; sourceTree = "<group>"; };
+		36B1E04A239FD14200711016 /* ListStaticTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListStaticTableViewCell.swift; sourceTree = "<group>"; };
+		36B1E06F239FECCD00711016 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		57D8F7452374CA2200D38CB1 /* Frameworks */ = {
+		3668581F239FBFAD00346A56 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,72 +49,78 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		57D8F73F2374CA2200D38CB1 = {
+		36685819239FBFAD00346A56 = {
 			isa = PBXGroup;
 			children = (
-				57D8F74A2374CA2200D38CB1 /* MinimaList */,
-				57D8F7492374CA2200D38CB1 /* Products */,
+				36685824239FBFAD00346A56 /* Minimalist */,
+				36685823239FBFAD00346A56 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		57D8F7492374CA2200D38CB1 /* Products */ = {
+		36685823239FBFAD00346A56 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				57D8F7482374CA2200D38CB1 /* MinimaList.app */,
+				36685822239FBFAD00346A56 /* Minimalist.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		57D8F74A2374CA2200D38CB1 /* MinimaList */ = {
+		36685824239FBFAD00346A56 /* Minimalist */ = {
 			isa = PBXGroup;
 			children = (
-				57D8F74B2374CA2200D38CB1 /* AppDelegate.swift */,
-				57D8F74D2374CA2200D38CB1 /* SceneDelegate.swift */,
-				57D8F7512374CA2200D38CB1 /* Main.storyboard */,
-				57D8F7572374CA2400D38CB1 /* Assets.xcassets */,
-				57D8F7592374CA2400D38CB1 /* LaunchScreen.storyboard */,
-				57D8F75C2374CA2400D38CB1 /* Info.plist */,
-				57D8F7542374CA2200D38CB1 /* MinimaList.xcdatamodeld */,
+				36685825239FBFAD00346A56 /* AppDelegate.swift */,
+				36685827239FBFAD00346A56 /* SceneDelegate.swift */,
+				3668583E239FC1E600346A56 /* ListeTableViewController.swift */,
+				36B1E04A239FD14200711016 /* ListStaticTableViewCell.swift */,
+				36874FA423A00290009C7FE4 /* TaskToDoTableViewController.swift */,
+				36B1E048239FCE2700711016 /* TaskTableViewController.swift */,
+				36B1E06F239FECCD00711016 /* TaskViewController.swift */,
+				36874FA223A000C3009C7FE4 /* CompleteViewController.swift */,
+				3668582B239FBFAD00346A56 /* Main.storyboard */,
+				36685831239FBFAF00346A56 /* Assets.xcassets */,
+				36685833239FBFAF00346A56 /* LaunchScreen.storyboard */,
+				36685836239FBFAF00346A56 /* Info.plist */,
+				3668582E239FBFAD00346A56 /* Minimalist.xcdatamodeld */,
 			);
-			path = MinimaList;
+			path = Minimalist;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		57D8F7472374CA2200D38CB1 /* MinimaList */ = {
+		36685821239FBFAD00346A56 /* Minimalist */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 57D8F75F2374CA2400D38CB1 /* Build configuration list for PBXNativeTarget "MinimaList" */;
+			buildConfigurationList = 36685839239FBFAF00346A56 /* Build configuration list for PBXNativeTarget "Minimalist" */;
 			buildPhases = (
-				57D8F7442374CA2200D38CB1 /* Sources */,
-				57D8F7452374CA2200D38CB1 /* Frameworks */,
-				57D8F7462374CA2200D38CB1 /* Resources */,
+				3668581E239FBFAD00346A56 /* Sources */,
+				3668581F239FBFAD00346A56 /* Frameworks */,
+				36685820239FBFAD00346A56 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = MinimaList;
-			productName = MinimaList;
-			productReference = 57D8F7482374CA2200D38CB1 /* MinimaList.app */;
+			name = Minimalist;
+			productName = Minimalist;
+			productReference = 36685822239FBFAD00346A56 /* Minimalist.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		57D8F7402374CA2200D38CB1 /* Project object */ = {
+		3668581A239FBFAD00346A56 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = Leuleu;
 				TargetAttributes = {
-					57D8F7472374CA2200D38CB1 = {
-						CreatedOnToolsVersion = 11.0;
+					36685821239FBFAD00346A56 = {
+						CreatedOnToolsVersion = 11.2.1;
 					};
 				};
 			};
-			buildConfigurationList = 57D8F7432374CA2200D38CB1 /* Build configuration list for PBXProject "MinimaList" */;
+			buildConfigurationList = 3668581D239FBFAD00346A56 /* Build configuration list for PBXProject "Minimalist" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,55 +128,61 @@
 				en,
 				Base,
 			);
-			mainGroup = 57D8F73F2374CA2200D38CB1;
-			productRefGroup = 57D8F7492374CA2200D38CB1 /* Products */;
+			mainGroup = 36685819239FBFAD00346A56;
+			productRefGroup = 36685823239FBFAD00346A56 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				57D8F7472374CA2200D38CB1 /* MinimaList */,
+				36685821239FBFAD00346A56 /* Minimalist */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		57D8F7462374CA2200D38CB1 /* Resources */ = {
+		36685820239FBFAD00346A56 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57D8F75B2374CA2400D38CB1 /* LaunchScreen.storyboard in Resources */,
-				57D8F7582374CA2400D38CB1 /* Assets.xcassets in Resources */,
-				57D8F7532374CA2200D38CB1 /* Main.storyboard in Resources */,
+				36685835239FBFAF00346A56 /* LaunchScreen.storyboard in Resources */,
+				36685832239FBFAF00346A56 /* Assets.xcassets in Resources */,
+				3668582D239FBFAD00346A56 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		57D8F7442374CA2200D38CB1 /* Sources */ = {
+		3668581E239FBFAD00346A56 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57D8F74C2374CA2200D38CB1 /* AppDelegate.swift in Sources */,
-				57D8F7562374CA2200D38CB1 /* MinimaList.xcdatamodeld in Sources */,
-				57D8F74E2374CA2200D38CB1 /* SceneDelegate.swift in Sources */,
+				36B1E049239FCE2700711016 /* TaskTableViewController.swift in Sources */,
+				36B1E04B239FD14200711016 /* ListStaticTableViewCell.swift in Sources */,
+				36685826239FBFAD00346A56 /* AppDelegate.swift in Sources */,
+				3668583F239FC1E600346A56 /* ListeTableViewController.swift in Sources */,
+				36B1E070239FECCD00711016 /* TaskViewController.swift in Sources */,
+				36685830239FBFAD00346A56 /* Minimalist.xcdatamodeld in Sources */,
+				36685828239FBFAD00346A56 /* SceneDelegate.swift in Sources */,
+				36874FA523A00290009C7FE4 /* TaskToDoTableViewController.swift in Sources */,
+				36874FA323A000C3009C7FE4 /* CompleteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		57D8F7512374CA2200D38CB1 /* Main.storyboard */ = {
+		3668582B239FBFAD00346A56 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				57D8F7522374CA2200D38CB1 /* Base */,
+				3668582C239FBFAD00346A56 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		57D8F7592374CA2400D38CB1 /* LaunchScreen.storyboard */ = {
+		36685833239FBFAF00346A56 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				57D8F75A2374CA2400D38CB1 /* Base */,
+				36685834239FBFAF00346A56 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -166,7 +190,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		57D8F75D2374CA2400D38CB1 /* Debug */ = {
+		36685837239FBFAF00346A56 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -216,7 +240,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -226,7 +250,7 @@
 			};
 			name = Debug;
 		};
-		57D8F75E2374CA2400D38CB1 /* Release */ = {
+		36685838239FBFAF00346A56 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -270,7 +294,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -280,36 +304,36 @@
 			};
 			name = Release;
 		};
-		57D8F7602374CA2400D38CB1 /* Debug */ = {
+		3668583A239FBFAF00346A56 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2H66L8VL4G;
-				INFOPLIST_FILE = MinimaList/Info.plist;
+				INFOPLIST_FILE = Minimalist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Laura.MinimaList;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.utt.if26.Minimalist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		57D8F7612374CA2400D38CB1 /* Release */ = {
+		3668583B239FBFAF00346A56 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2H66L8VL4G;
-				INFOPLIST_FILE = MinimaList/Info.plist;
+				INFOPLIST_FILE = Minimalist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Laura.MinimaList;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.utt.if26.Minimalist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -319,20 +343,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		57D8F7432374CA2200D38CB1 /* Build configuration list for PBXProject "MinimaList" */ = {
+		3668581D239FBFAD00346A56 /* Build configuration list for PBXProject "Minimalist" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				57D8F75D2374CA2400D38CB1 /* Debug */,
-				57D8F75E2374CA2400D38CB1 /* Release */,
+				36685837239FBFAF00346A56 /* Debug */,
+				36685838239FBFAF00346A56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		57D8F75F2374CA2400D38CB1 /* Build configuration list for PBXNativeTarget "MinimaList" */ = {
+		36685839239FBFAF00346A56 /* Build configuration list for PBXNativeTarget "Minimalist" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				57D8F7602374CA2400D38CB1 /* Debug */,
-				57D8F7612374CA2400D38CB1 /* Release */,
+				3668583A239FBFAF00346A56 /* Debug */,
+				3668583B239FBFAF00346A56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -340,17 +364,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		57D8F7542374CA2200D38CB1 /* MinimaList.xcdatamodeld */ = {
+		3668582E239FBFAD00346A56 /* Minimalist.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				57D8F7552374CA2200D38CB1 /* MinimaList.xcdatamodel */,
+				3668582F239FBFAD00346A56 /* Minimalist.xcdatamodel */,
 			);
-			currentVersion = 57D8F7552374CA2200D38CB1 /* MinimaList.xcdatamodel */;
-			path = MinimaList.xcdatamodeld;
+			currentVersion = 3668582F239FBFAD00346A56 /* Minimalist.xcdatamodel */;
+			path = Minimalist.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = 57D8F7402374CA2200D38CB1 /* Project object */;
+	rootObject = 3668581A239FBFAD00346A56 /* Project object */;
 }

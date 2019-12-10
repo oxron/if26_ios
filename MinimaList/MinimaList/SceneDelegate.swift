@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  MinimaList
+//  Minimalist
 //
-//  Created by Leuleu on 07/11/2019.
+//  Created by Leuleu on 10/12/2019.
 //  Copyright © 2019 Leuleu. All rights reserved.
 //
 

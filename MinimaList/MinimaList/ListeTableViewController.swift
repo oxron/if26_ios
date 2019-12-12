@@ -12,9 +12,7 @@ import CoreData
 class ListeTableViewController: UITableViewController {
 
     
-    @IBOutlet weak var TaskLabel: UIView!
-    @IBOutlet weak var ImportantLabel: UIView!
-    @IBOutlet weak var PlannedLabel: UIView!
+  
     
     var listes : [Liste] = []
     
@@ -46,7 +44,7 @@ class ListeTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "StaticCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "staticCell", for: indexPath) as! ListStaticTableViewCell
 
         let list = listes[indexPath.row]
         

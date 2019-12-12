@@ -12,10 +12,14 @@ import CoreData
 class TaskTableViewController: UITableViewController {
 
     var task : Task? = nil
+    var liste : Liste? = nil
     
     var tasks : [Task] = []
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+         self.tableView.reloadData()
+        
     }
 
     // MARK: - Table view data source
@@ -36,16 +40,20 @@ class TaskTableViewController: UITableViewController {
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-          let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as! CustomCellTableViewCell
               
               let task = tasks[indexPath.row]
               
+              cell.taskLabel.text = task.name
+        
               if task.important {
-                  if let name = task.name {
-                      cell.textLabel?.text = name + "   ‼️"
+                if let name = task.name {
+                    cell.taskLabel.text = name
+                    cell.importantButton.isHidden = false
                   }
               } else {
-                  cell.textLabel?.text = task.name
+                
+                  cell.taskLabel.text = task.name
               }
 
         return cell
@@ -65,25 +73,28 @@ class TaskTableViewController: UITableViewController {
                 
             }
         }
-    }    /*
-    // Override to support conditional editing of the table view.
+    }
+  
+   // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
+    
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+            tasks.remove(at: indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: .fade)
+            self.tableView.reloadData()
+        }
+        
+        
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.

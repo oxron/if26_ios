@@ -23,6 +23,8 @@ class ListeTableViewController: UITableViewController {
     
         
         
+        
+        
 
     }
 
@@ -59,10 +61,10 @@ class ListeTableViewController: UITableViewController {
         performSegue(withIdentifier: "goToList", sender: selectedList)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         
-        if let listeDetail = segue.destination as? TaskToDoTableViewController {
+       if let listeDetail = segue.destination as? TaskTableViewController {
             if let liste = sender as? Liste {
                 listeDetail.liste = liste
                 

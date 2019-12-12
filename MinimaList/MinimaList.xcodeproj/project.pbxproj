@@ -15,10 +15,10 @@
 		36685835239FBFAF00346A56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36685833239FBFAF00346A56 /* LaunchScreen.storyboard */; };
 		3668583F239FC1E600346A56 /* ListeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3668583E239FC1E600346A56 /* ListeTableViewController.swift */; };
 		36874FA323A000C3009C7FE4 /* CompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36874FA223A000C3009C7FE4 /* CompleteViewController.swift */; };
-		36874FA523A00290009C7FE4 /* TaskToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36874FA423A00290009C7FE4 /* TaskToDoTableViewController.swift */; };
 		36B1E049239FCE2700711016 /* TaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B1E048239FCE2700711016 /* TaskTableViewController.swift */; };
 		36B1E04B239FD14200711016 /* ListStaticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B1E04A239FD14200711016 /* ListStaticTableViewCell.swift */; };
 		36B1E070239FECCD00711016 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B1E06F239FECCD00711016 /* TaskViewController.swift */; };
+		36EDC80D23A021910011035E /* CustomCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EDC80B23A021910011035E /* CustomCellTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,10 +32,10 @@
 		36685836239FBFAF00346A56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3668583E239FC1E600346A56 /* ListeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListeTableViewController.swift; sourceTree = "<group>"; };
 		36874FA223A000C3009C7FE4 /* CompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteViewController.swift; sourceTree = "<group>"; };
-		36874FA423A00290009C7FE4 /* TaskToDoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskToDoTableViewController.swift; sourceTree = "<group>"; };
 		36B1E048239FCE2700711016 /* TaskTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewController.swift; sourceTree = "<group>"; };
 		36B1E04A239FD14200711016 /* ListStaticTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListStaticTableViewCell.swift; sourceTree = "<group>"; };
 		36B1E06F239FECCD00711016 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
+		36EDC80B23A021910011035E /* CustomCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,9 +72,9 @@
 				36685827239FBFAD00346A56 /* SceneDelegate.swift */,
 				3668583E239FC1E600346A56 /* ListeTableViewController.swift */,
 				36B1E04A239FD14200711016 /* ListStaticTableViewCell.swift */,
-				36874FA423A00290009C7FE4 /* TaskToDoTableViewController.swift */,
 				36B1E048239FCE2700711016 /* TaskTableViewController.swift */,
 				36B1E06F239FECCD00711016 /* TaskViewController.swift */,
+				36EDC80B23A021910011035E /* CustomCellTableViewCell.swift */,
 				36874FA223A000C3009C7FE4 /* CompleteViewController.swift */,
 				3668582B239FBFAD00346A56 /* Main.storyboard */,
 				36685831239FBFAF00346A56 /* Assets.xcassets */,
@@ -163,7 +163,7 @@
 				36B1E070239FECCD00711016 /* TaskViewController.swift in Sources */,
 				36685830239FBFAD00346A56 /* Minimalist.xcdatamodeld in Sources */,
 				36685828239FBFAD00346A56 /* SceneDelegate.swift in Sources */,
-				36874FA523A00290009C7FE4 /* TaskToDoTableViewController.swift in Sources */,
+				36EDC80D23A021910011035E /* CustomCellTableViewCell.swift in Sources */,
 				36874FA323A000C3009C7FE4 /* CompleteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

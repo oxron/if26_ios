@@ -19,6 +19,7 @@
 		36B1E04B239FD14200711016 /* ListStaticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B1E04A239FD14200711016 /* ListStaticTableViewCell.swift */; };
 		36B1E070239FECCD00711016 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B1E06F239FECCD00711016 /* TaskViewController.swift */; };
 		36EDC80D23A021910011035E /* CustomCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EDC80B23A021910011035E /* CustomCellTableViewCell.swift */; };
+		36F953E023A3CA2400025659 /* ImportantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F953DF23A3CA2400025659 /* ImportantTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		36B1E04A239FD14200711016 /* ListStaticTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListStaticTableViewCell.swift; sourceTree = "<group>"; };
 		36B1E06F239FECCD00711016 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		36EDC80B23A021910011035E /* CustomCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellTableViewCell.swift; sourceTree = "<group>"; };
+		36F953DF23A3CA2400025659 /* ImportantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportantTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,9 +75,10 @@
 				3668583E239FC1E600346A56 /* ListeTableViewController.swift */,
 				36B1E04A239FD14200711016 /* ListStaticTableViewCell.swift */,
 				36B1E048239FCE2700711016 /* TaskTableViewController.swift */,
-				36B1E06F239FECCD00711016 /* TaskViewController.swift */,
 				36EDC80B23A021910011035E /* CustomCellTableViewCell.swift */,
+				36B1E06F239FECCD00711016 /* TaskViewController.swift */,
 				36874FA223A000C3009C7FE4 /* CompleteViewController.swift */,
+				36F953DF23A3CA2400025659 /* ImportantTableViewController.swift */,
 				3668582B239FBFAD00346A56 /* Main.storyboard */,
 				36685831239FBFAF00346A56 /* Assets.xcassets */,
 				36685833239FBFAF00346A56 /* LaunchScreen.storyboard */,
@@ -156,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36F953E023A3CA2400025659 /* ImportantTableViewController.swift in Sources */,
 				36B1E049239FCE2700711016 /* TaskTableViewController.swift in Sources */,
 				36B1E04B239FD14200711016 /* ListStaticTableViewCell.swift in Sources */,
 				36685826239FBFAD00346A56 /* AppDelegate.swift in Sources */,

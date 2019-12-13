@@ -13,6 +13,7 @@ class TaskTableViewController: UITableViewController {
 
     var task : Task? = nil
     var liste : Liste? = nil
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     var tasks : [Task] = []
     override func viewDidLoad() {
@@ -75,21 +76,25 @@ class TaskTableViewController: UITableViewController {
         }
     }
   
-   // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    
+  
 
     
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
+            
+            context.delete(tasks[indexPath.row])
             tasks.remove(at: indexPath.row)
-            self.tableView.deleteRows(at: [indexPath], with: .fade)
-            self.tableView.reloadData()
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            
+            do {
+                    try context.save()
+            } catch {
+                
+            }
+            
+            tableView.reloadData()
         }
         
         

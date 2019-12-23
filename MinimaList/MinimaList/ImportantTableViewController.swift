@@ -12,48 +12,47 @@ import CoreData
 class ImportantTableViewController: UITableViewController {
     
 
-    var tasks = [Task](){
-        didSet{
-            importantData()
-        }
-    }
+    var tasks = [Task]()
+
+    
+
     var sortedTasks = [Task]()
+    
+    var selectedListe:Liste?
+    
 
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        importantData()
-        
+      
+      
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
-       
+    
+        importantTasks()
+        sortedTasks = tasks.sorted{
+            ($0.dueDate ?? .distantFuture) < ($1.dueDate ?? .distantFuture)
+        }
       
     }
-
     
-   func importantData(){
-        
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Task")
+    func importantTasks(){
+        let request: NSFetchRequest<Task> = Task.fetchRequest()
         request.returnsObjectsAsFaults = false
+        request.predicate = NSPredicate(format: "important == true")
+
         do {
-            let result = try? context.fetch(request)
-            for r in result as! [NSManagedObject]{
-                let tasks = r as! Task
-                if tasks.important == true {
-                    
-                    print(tasks)
-                  
-                   
-                    }
-            
-            }
+            tasks = try context.fetch(request)
+        }catch{
+            print("Error fetching data from context \(error)")
         }
+        tableView.reloadData()
     }
+
+
        
 
     // MARK: - Table view data source
@@ -61,7 +60,12 @@ class ImportantTableViewController: UITableViewController {
    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return tasks.count
+       if sortedTasks.count == 0 {
+            self.tableView.setEmptyMessage("Il n'y a pas de tâches importante")
+        } else {
+            self.tableView.restore()
+        }
+        return sortedTasks.count
     }
 
     
@@ -69,13 +73,88 @@ class ImportantTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath) as! TaskTableViewCell
 
         // Configure the cell...
-        let task = tasks[indexPath.row]
-        if task.important == true {
-            cell.textLabel?.text = task.name
-        }
+        let task = sortedTasks[indexPath.row]
+        cell.taskLabel1.text = task.name
+           cell.setCell1(task: task)
+        
+           
+           if task.done {
+               cell.backgroundColor = #colorLiteral(red: 0.8320295215, green: 0.9826709628, blue: 0, alpha: 1)
+           } else {
+               cell.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+           }
         
 
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+             let taskCompletion = sortedTasks[indexPath.row].done ? "Restart" : "Complete"
+             let action = UIContextualAction(style: .normal, title: taskCompletion) { (action, view, completion) in
+                 self.sortedTasks[indexPath.row].done = !self.sortedTasks[indexPath.row].done
+                 
+                 do{
+                     try self.context.save()
+                     
+                     completion(true)
+                 }catch {
+                     print("Error saving item with \(error)")
+                 }
+                 tableView.reloadData()
+             }
+             action.backgroundColor = .green
+             
+             return UISwipeActionsConfiguration(actions: [action])
+         }
+     
+     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+            return true
+        }
+        
+        override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            performSegue(withIdentifier: "toDetail1", sender: tableView.cellForRow(at: indexPath))
+            
+        }
+     
+    
+      
+      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+          
+         if let destinationVC = segue.destination as? NewTaskViewController {
+             if let indexPath = tableView.indexPathForSelectedRow {
+                 destinationVC.selectedTask = sortedTasks[indexPath.row]
+             }
+         }
+             
+         }
+          
+     
 
+    @IBAction func addTask(_ sender: Any) {
+        
+        performSegue(withIdentifier: "toDetail1", sender: UITabBarItem.self)
+    }
+    
+
+     
+     
+     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+     if editingStyle == .delete {
+         // Delete the row from the data source
+         
+         context.delete(sortedTasks[indexPath.row])
+         sortedTasks.remove(at: indexPath.row)
+         tableView.deleteRows(at: [indexPath], with: .fade)
+         
+         do {
+                 try context.save()
+            
+         } catch {
+             
+         }
+         
+         tableView.reloadData()
+     }
+
+}
 }

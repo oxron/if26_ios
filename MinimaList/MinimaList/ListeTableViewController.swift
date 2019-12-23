@@ -12,7 +12,6 @@ import CoreData
 class ListeTableViewController: UITableViewController {
     
     var listes = [Liste]()
-    let defaultListe : [String]=["Tâche","Important","Plannifié"]
     var indexNumber = Int()
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -93,6 +92,10 @@ class ListeTableViewController: UITableViewController {
     case "goToTask":
         return
     case "goToImportant":
+        let destination = segue.destination as! ImportantTableViewController
+        if let indexPath = tableView.indexPathForSelectedRow{
+            destination.selectedListe = listes[indexPath.row - 1]
+        }
         return
     case "goToPlanned":
         return

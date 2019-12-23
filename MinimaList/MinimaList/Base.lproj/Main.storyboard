@@ -346,7 +346,7 @@
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="taskCell" rowHeight="103" id="zSl-ee-Ulo">
                                 <rect key="frame" x="0.0" y="28" width="414" height="103"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zSl-ee-Ulo" id="mhe-qw-BQp">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zSl-ee-Ulo" id="mhe-qw-BQp" customClass="TaskTableViewCell" customModule="Minimalist" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="383" height="103"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -416,7 +416,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hwd-MK-gG3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1241" y="-582"/>
+            <point key="canvasLocation" x="1241" y="-615"/>
         </scene>
         <!--Important-->
         <scene sceneID="n6i-7I-6ml">
@@ -434,7 +434,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="383" height="103"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1sW-bc-0gz">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1sW-bc-0gz">
                                             <rect key="frame" x="343" y="40.5" width="22" height="22"/>
                                             <state key="normal" image="star.fill" catalog="system"/>
                                         </button>
@@ -475,9 +475,12 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="deadlineLabel" destination="gR0-gX-J3v" id="9o4-kG-RW7"/>
+                                    <outlet property="deadlineLabel1" destination="gR0-gX-J3v" id="NQQ-92-mhL"/>
                                     <outlet property="hourLabel" destination="sOL-pE-fcS" id="wBf-4H-bxH"/>
+                                    <outlet property="hourLabel1" destination="sOL-pE-fcS" id="XS8-gP-Jfi"/>
                                     <outlet property="importantButton" destination="1sW-bc-0gz" id="YT6-9s-zHn"/>
                                     <outlet property="taskLabel" destination="L8T-Lm-9Cb" id="Ndw-Mm-nbR"/>
+                                    <outlet property="taskLabel1" destination="L8T-Lm-9Cb" id="OPw-jc-Wom"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -493,7 +496,8 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="cYh-Ek-tIr">
                             <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             <connections>
-                                <action selector="addTask:" destination="aDl-iL-9eo" id="dd6-wT-flH"/>
+                                <action selector="addTask:" destination="aDl-iL-9eo" id="jt3-KD-E1c"/>
+                                <segue destination="2Ag-vm-PKK" kind="show" identifier="toDetail1" id="eAM-XC-wqy"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -511,7 +515,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="taskCell" rowHeight="103" id="O8Z-hO-Bip">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="taskCell" rowHeight="103" id="O8Z-hO-Bip" customClass="TaskTableViewCell" customModule="Minimalist" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="103"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="O8Z-hO-Bip" id="gYL-gp-Ogc">
@@ -559,9 +563,13 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="deadlineLabel" destination="hre-pM-5cP" id="O45-U1-rQ6"/>
+                                    <outlet property="deadlineLabel2" destination="hre-pM-5cP" id="Ocl-U6-yk4"/>
                                     <outlet property="hourLabel" destination="nYc-mG-Lt8" id="S7v-ko-7CT"/>
+                                    <outlet property="hourLabel2" destination="nYc-mG-Lt8" id="xDQ-Yy-xec"/>
                                     <outlet property="importantButton" destination="3CC-0r-ICW" id="FTy-nf-LyQ"/>
+                                    <outlet property="importantButton2" destination="3CC-0r-ICW" id="LgR-ek-OFC"/>
                                     <outlet property="taskLabel" destination="X4q-qd-iN7" id="nIC-Hm-fF4"/>
+                                    <outlet property="taskLabel2" destination="X4q-qd-iN7" id="2gC-gb-9Hc"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -577,7 +585,8 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="5Z8-em-37c">
                             <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             <connections>
-                                <action selector="addTask:" destination="A3l-5Y-add" id="zoh-Fe-ZX2"/>
+                                <action selector="addTask:" destination="A3l-5Y-add" id="Kxh-HB-Dn9"/>
+                                <segue destination="2Ag-vm-PKK" kind="show" identifier="toDetail2" id="ubL-JW-EYk"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -594,4 +603,7 @@
         <image name="star.fill" catalog="system" width="64" height="58"/>
         <image name="sun.min" catalog="system" width="64" height="60"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Hic-Qy-DcD"/>
+    </inferredMetricsTieBreakers>
 </document>

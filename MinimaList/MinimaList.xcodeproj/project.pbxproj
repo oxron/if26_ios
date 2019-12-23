@@ -7,41 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		36685826239FBFAD00346A56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36685825239FBFAD00346A56 /* AppDelegate.swift */; };
-		36685828239FBFAD00346A56 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36685827239FBFAD00346A56 /* SceneDelegate.swift */; };
-		3668582D239FBFAD00346A56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3668582B239FBFAD00346A56 /* Main.storyboard */; };
-		36685830239FBFAD00346A56 /* Minimalist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3668582E239FBFAD00346A56 /* Minimalist.xcdatamodeld */; };
-		36685832239FBFAF00346A56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36685831239FBFAF00346A56 /* Assets.xcassets */; };
-		36685835239FBFAF00346A56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36685833239FBFAF00346A56 /* LaunchScreen.storyboard */; };
-		3668583F239FC1E600346A56 /* ListeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3668583E239FC1E600346A56 /* ListeTableViewController.swift */; };
-		36874FA323A000C3009C7FE4 /* CompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36874FA223A000C3009C7FE4 /* CompleteViewController.swift */; };
-		36B1E049239FCE2700711016 /* TaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B1E048239FCE2700711016 /* TaskTableViewController.swift */; };
-		36B1E04B239FD14200711016 /* ListStaticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B1E04A239FD14200711016 /* ListStaticTableViewCell.swift */; };
-		36B1E070239FECCD00711016 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B1E06F239FECCD00711016 /* TaskViewController.swift */; };
-		36EDC80D23A021910011035E /* CustomCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EDC80B23A021910011035E /* CustomCellTableViewCell.swift */; };
-		36F953E023A3CA2400025659 /* ImportantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F953DF23A3CA2400025659 /* ImportantTableViewController.swift */; };
+		367E908323B05DDF00A90F0A /* TaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367E908223B05DDF00A90F0A /* TaskTableViewController.swift */; };
+		367E908523B05E8000A90F0A /* ImportantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367E908423B05E8000A90F0A /* ImportantTableViewController.swift */; };
+		367E908723B05E8E00A90F0A /* PlannedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367E908623B05E8E00A90F0A /* PlannedTableViewController.swift */; };
+		3694C3F723AE7DC500727A49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3694C3F623AE7DC500727A49 /* AppDelegate.swift */; };
+		3694C3F923AE7DC500727A49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3694C3F823AE7DC500727A49 /* SceneDelegate.swift */; };
+		3694C3FE23AE7DC500727A49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3694C3FC23AE7DC500727A49 /* Main.storyboard */; };
+		3694C40123AE7DC500727A49 /* Minimalist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3694C3FF23AE7DC500727A49 /* Minimalist.xcdatamodeld */; };
+		3694C40323AE7DC900727A49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3694C40223AE7DC900727A49 /* Assets.xcassets */; };
+		3694C40623AE7DC900727A49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3694C40423AE7DC900727A49 /* LaunchScreen.storyboard */; };
+		3694C40E23AE7FE300727A49 /* ListeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3694C40D23AE7FE300727A49 /* ListeTableViewController.swift */; };
+		3694C41023AE8C9700727A49 /* TaskDynamicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3694C40F23AE8C9700727A49 /* TaskDynamicTableViewController.swift */; };
+		3694C41223AE943D00727A49 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3694C41123AE943D00727A49 /* TaskTableViewCell.swift */; };
+		3694C41C23AF9AD000727A49 /* NewTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3694C41B23AF9AD000727A49 /* NewTaskViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		36685822239FBFAD00346A56 /* Minimalist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Minimalist.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		36685825239FBFAD00346A56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		36685827239FBFAD00346A56 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3668582C239FBFAD00346A56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3668582F239FBFAD00346A56 /* Minimalist.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Minimalist.xcdatamodel; sourceTree = "<group>"; };
-		36685831239FBFAF00346A56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		36685834239FBFAF00346A56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		36685836239FBFAF00346A56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3668583E239FC1E600346A56 /* ListeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListeTableViewController.swift; sourceTree = "<group>"; };
-		36874FA223A000C3009C7FE4 /* CompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteViewController.swift; sourceTree = "<group>"; };
-		36B1E048239FCE2700711016 /* TaskTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewController.swift; sourceTree = "<group>"; };
-		36B1E04A239FD14200711016 /* ListStaticTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListStaticTableViewCell.swift; sourceTree = "<group>"; };
-		36B1E06F239FECCD00711016 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
-		36EDC80B23A021910011035E /* CustomCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellTableViewCell.swift; sourceTree = "<group>"; };
-		36F953DF23A3CA2400025659 /* ImportantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportantTableViewController.swift; sourceTree = "<group>"; };
+		367E908223B05DDF00A90F0A /* TaskTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewController.swift; sourceTree = "<group>"; };
+		367E908423B05E8000A90F0A /* ImportantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportantTableViewController.swift; sourceTree = "<group>"; };
+		367E908623B05E8E00A90F0A /* PlannedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannedTableViewController.swift; sourceTree = "<group>"; };
+		3694C3F323AE7DC500727A49 /* Minimalist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Minimalist.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3694C3F623AE7DC500727A49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3694C3F823AE7DC500727A49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3694C3FD23AE7DC500727A49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3694C40023AE7DC500727A49 /* Minimalist.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Minimalist.xcdatamodel; sourceTree = "<group>"; };
+		3694C40223AE7DC900727A49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3694C40523AE7DC900727A49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3694C40723AE7DC900727A49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3694C40D23AE7FE300727A49 /* ListeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListeTableViewController.swift; sourceTree = "<group>"; };
+		3694C40F23AE8C9700727A49 /* TaskDynamicTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDynamicTableViewController.swift; sourceTree = "<group>"; };
+		3694C41123AE943D00727A49 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		3694C41B23AF9AD000727A49 /* NewTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3668581F239FBFAD00346A56 /* Frameworks */ = {
+		3694C3F023AE7DC500727A49 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -51,39 +51,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		36685819239FBFAD00346A56 = {
+		3694C3EA23AE7DC500727A49 = {
 			isa = PBXGroup;
 			children = (
-				36685824239FBFAD00346A56 /* Minimalist */,
-				36685823239FBFAD00346A56 /* Products */,
+				3694C3F523AE7DC500727A49 /* Minimalist */,
+				3694C3F423AE7DC500727A49 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		36685823239FBFAD00346A56 /* Products */ = {
+		3694C3F423AE7DC500727A49 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				36685822239FBFAD00346A56 /* Minimalist.app */,
+				3694C3F323AE7DC500727A49 /* Minimalist.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		36685824239FBFAD00346A56 /* Minimalist */ = {
+		3694C3F523AE7DC500727A49 /* Minimalist */ = {
 			isa = PBXGroup;
 			children = (
-				36685825239FBFAD00346A56 /* AppDelegate.swift */,
-				36685827239FBFAD00346A56 /* SceneDelegate.swift */,
-				3668583E239FC1E600346A56 /* ListeTableViewController.swift */,
-				36B1E04A239FD14200711016 /* ListStaticTableViewCell.swift */,
-				36B1E048239FCE2700711016 /* TaskTableViewController.swift */,
-				36EDC80B23A021910011035E /* CustomCellTableViewCell.swift */,
-				36B1E06F239FECCD00711016 /* TaskViewController.swift */,
-				36874FA223A000C3009C7FE4 /* CompleteViewController.swift */,
-				36F953DF23A3CA2400025659 /* ImportantTableViewController.swift */,
-				3668582B239FBFAD00346A56 /* Main.storyboard */,
-				36685831239FBFAF00346A56 /* Assets.xcassets */,
-				36685833239FBFAF00346A56 /* LaunchScreen.storyboard */,
-				36685836239FBFAF00346A56 /* Info.plist */,
-				3668582E239FBFAD00346A56 /* Minimalist.xcdatamodeld */,
+				3694C3F623AE7DC500727A49 /* AppDelegate.swift */,
+				3694C3F823AE7DC500727A49 /* SceneDelegate.swift */,
+				3694C40D23AE7FE300727A49 /* ListeTableViewController.swift */,
+				367E908223B05DDF00A90F0A /* TaskTableViewController.swift */,
+				367E908423B05E8000A90F0A /* ImportantTableViewController.swift */,
+				367E908623B05E8E00A90F0A /* PlannedTableViewController.swift */,
+				3694C40F23AE8C9700727A49 /* TaskDynamicTableViewController.swift */,
+				3694C41B23AF9AD000727A49 /* NewTaskViewController.swift */,
+				3694C41123AE943D00727A49 /* TaskTableViewCell.swift */,
+				3694C3FC23AE7DC500727A49 /* Main.storyboard */,
+				3694C40223AE7DC900727A49 /* Assets.xcassets */,
+				3694C40423AE7DC900727A49 /* LaunchScreen.storyboard */,
+				3694C40723AE7DC900727A49 /* Info.plist */,
+				3694C3FF23AE7DC500727A49 /* Minimalist.xcdatamodeld */,
 			);
 			path = Minimalist;
 			sourceTree = "<group>";
@@ -91,13 +91,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		36685821239FBFAD00346A56 /* Minimalist */ = {
+		3694C3F223AE7DC500727A49 /* Minimalist */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 36685839239FBFAF00346A56 /* Build configuration list for PBXNativeTarget "Minimalist" */;
+			buildConfigurationList = 3694C40A23AE7DC900727A49 /* Build configuration list for PBXNativeTarget "Minimalist" */;
 			buildPhases = (
-				3668581E239FBFAD00346A56 /* Sources */,
-				3668581F239FBFAD00346A56 /* Frameworks */,
-				36685820239FBFAD00346A56 /* Resources */,
+				3694C3EF23AE7DC500727A49 /* Sources */,
+				3694C3F023AE7DC500727A49 /* Frameworks */,
+				3694C3F123AE7DC500727A49 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -105,25 +105,25 @@
 			);
 			name = Minimalist;
 			productName = Minimalist;
-			productReference = 36685822239FBFAD00346A56 /* Minimalist.app */;
+			productReference = 3694C3F323AE7DC500727A49 /* Minimalist.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		3668581A239FBFAD00346A56 /* Project object */ = {
+		3694C3EB23AE7DC500727A49 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1120;
-				LastUpgradeCheck = 1120;
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = Leuleu;
 				TargetAttributes = {
-					36685821239FBFAD00346A56 = {
-						CreatedOnToolsVersion = 11.2.1;
+					3694C3F223AE7DC500727A49 = {
+						CreatedOnToolsVersion = 11.3;
 					};
 				};
 			};
-			buildConfigurationList = 3668581D239FBFAD00346A56 /* Build configuration list for PBXProject "Minimalist" */;
+			buildConfigurationList = 3694C3EE23AE7DC500727A49 /* Build configuration list for PBXProject "Minimalist" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -131,62 +131,62 @@
 				en,
 				Base,
 			);
-			mainGroup = 36685819239FBFAD00346A56;
-			productRefGroup = 36685823239FBFAD00346A56 /* Products */;
+			mainGroup = 3694C3EA23AE7DC500727A49;
+			productRefGroup = 3694C3F423AE7DC500727A49 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				36685821239FBFAD00346A56 /* Minimalist */,
+				3694C3F223AE7DC500727A49 /* Minimalist */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		36685820239FBFAD00346A56 /* Resources */ = {
+		3694C3F123AE7DC500727A49 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36685835239FBFAF00346A56 /* LaunchScreen.storyboard in Resources */,
-				36685832239FBFAF00346A56 /* Assets.xcassets in Resources */,
-				3668582D239FBFAD00346A56 /* Main.storyboard in Resources */,
+				3694C40623AE7DC900727A49 /* LaunchScreen.storyboard in Resources */,
+				3694C40323AE7DC900727A49 /* Assets.xcassets in Resources */,
+				3694C3FE23AE7DC500727A49 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3668581E239FBFAD00346A56 /* Sources */ = {
+		3694C3EF23AE7DC500727A49 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36F953E023A3CA2400025659 /* ImportantTableViewController.swift in Sources */,
-				36B1E049239FCE2700711016 /* TaskTableViewController.swift in Sources */,
-				36B1E04B239FD14200711016 /* ListStaticTableViewCell.swift in Sources */,
-				36685826239FBFAD00346A56 /* AppDelegate.swift in Sources */,
-				3668583F239FC1E600346A56 /* ListeTableViewController.swift in Sources */,
-				36B1E070239FECCD00711016 /* TaskViewController.swift in Sources */,
-				36685830239FBFAD00346A56 /* Minimalist.xcdatamodeld in Sources */,
-				36685828239FBFAD00346A56 /* SceneDelegate.swift in Sources */,
-				36EDC80D23A021910011035E /* CustomCellTableViewCell.swift in Sources */,
-				36874FA323A000C3009C7FE4 /* CompleteViewController.swift in Sources */,
+				3694C3F723AE7DC500727A49 /* AppDelegate.swift in Sources */,
+				3694C40E23AE7FE300727A49 /* ListeTableViewController.swift in Sources */,
+				367E908323B05DDF00A90F0A /* TaskTableViewController.swift in Sources */,
+				3694C41C23AF9AD000727A49 /* NewTaskViewController.swift in Sources */,
+				367E908723B05E8E00A90F0A /* PlannedTableViewController.swift in Sources */,
+				3694C41223AE943D00727A49 /* TaskTableViewCell.swift in Sources */,
+				3694C41023AE8C9700727A49 /* TaskDynamicTableViewController.swift in Sources */,
+				3694C40123AE7DC500727A49 /* Minimalist.xcdatamodeld in Sources */,
+				367E908523B05E8000A90F0A /* ImportantTableViewController.swift in Sources */,
+				3694C3F923AE7DC500727A49 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3668582B239FBFAD00346A56 /* Main.storyboard */ = {
+		3694C3FC23AE7DC500727A49 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3668582C239FBFAD00346A56 /* Base */,
+				3694C3FD23AE7DC500727A49 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		36685833239FBFAF00346A56 /* LaunchScreen.storyboard */ = {
+		3694C40423AE7DC900727A49 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				36685834239FBFAF00346A56 /* Base */,
+				3694C40523AE7DC900727A49 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -194,7 +194,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		36685837239FBFAF00346A56 /* Debug */ = {
+		3694C40823AE7DC900727A49 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -254,7 +254,7 @@
 			};
 			name = Debug;
 		};
-		36685838239FBFAF00346A56 /* Release */ = {
+		3694C40923AE7DC900727A49 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -308,7 +308,7 @@
 			};
 			name = Release;
 		};
-		3668583A239FBFAF00346A56 /* Debug */ = {
+		3694C40B23AE7DC900727A49 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -319,14 +319,14 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = fr.utt.if26.Minimalist;
+				PRODUCT_BUNDLE_IDENTIFIER = "haegel-teunissen.Minimalist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		3668583B239FBFAF00346A56 /* Release */ = {
+		3694C40C23AE7DC900727A49 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -337,7 +337,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = fr.utt.if26.Minimalist;
+				PRODUCT_BUNDLE_IDENTIFIER = "haegel-teunissen.Minimalist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -347,20 +347,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3668581D239FBFAD00346A56 /* Build configuration list for PBXProject "Minimalist" */ = {
+		3694C3EE23AE7DC500727A49 /* Build configuration list for PBXProject "Minimalist" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				36685837239FBFAF00346A56 /* Debug */,
-				36685838239FBFAF00346A56 /* Release */,
+				3694C40823AE7DC900727A49 /* Debug */,
+				3694C40923AE7DC900727A49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		36685839239FBFAF00346A56 /* Build configuration list for PBXNativeTarget "Minimalist" */ = {
+		3694C40A23AE7DC900727A49 /* Build configuration list for PBXNativeTarget "Minimalist" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3668583A239FBFAF00346A56 /* Debug */,
-				3668583B239FBFAF00346A56 /* Release */,
+				3694C40B23AE7DC900727A49 /* Debug */,
+				3694C40C23AE7DC900727A49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -368,17 +368,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		3668582E239FBFAD00346A56 /* Minimalist.xcdatamodeld */ = {
+		3694C3FF23AE7DC500727A49 /* Minimalist.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				3668582F239FBFAD00346A56 /* Minimalist.xcdatamodel */,
+				3694C40023AE7DC500727A49 /* Minimalist.xcdatamodel */,
 			);
-			currentVersion = 3668582F239FBFAD00346A56 /* Minimalist.xcdatamodel */;
+			currentVersion = 3694C40023AE7DC500727A49 /* Minimalist.xcdatamodel */;
 			path = Minimalist.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = 3668581A239FBFAD00346A56 /* Project object */;
+	rootObject = 3694C3EB23AE7DC500727A49 /* Project object */;
 }

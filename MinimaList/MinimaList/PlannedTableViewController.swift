@@ -1,5 +1,5 @@
 //
-//  TaskTableViewController.swift
+//  PlannedTableViewController.swift
 //  Minimalist
 //
 //  Created by Leuleu on 23/12/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TaskTableViewController: UITableViewController {
+class PlannedTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

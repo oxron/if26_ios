@@ -79,7 +79,7 @@ class ImportantTableViewController: UITableViewController {
         
            
            if task.done {
-               cell.backgroundColor = #colorLiteral(red: 0.8320295215, green: 0.9826709628, blue: 0, alpha: 1)
+               cell.backgroundColor = #colorLiteral(red: 0.0671977813, green: 0.8235294223, blue: 0.0006074571761, alpha: 1)
            } else {
                cell.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
            }

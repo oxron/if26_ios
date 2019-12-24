@@ -18,8 +18,6 @@ class ListeTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-     loadFromStorage()
         
         print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
         
@@ -63,7 +61,7 @@ class ListeTableViewController: UITableViewController {
         default:
             let liste = listes[indexPath.row - 3]
             let cell = tableView.dequeueReusableCell(withIdentifier: "dynamicCell", for: indexPath)
-            cell.textLabel?.text = liste.name
+            cell.textLabel?.text = liste.listeName
             return cell
         }
         
@@ -92,10 +90,6 @@ class ListeTableViewController: UITableViewController {
     case "goToTask":
         return
     case "goToImportant":
-        let destination = segue.destination as! ImportantTableViewController
-        if let indexPath = tableView.indexPathForSelectedRow{
-            destination.selectedListe = listes[indexPath.row - 1]
-        }
         return
     case "goToPlanned":
         return
@@ -106,21 +100,6 @@ class ListeTableViewController: UITableViewController {
             }
         
     }
-    }
-    
-
-
-    func loadFromStorage() {
-        
-        let request: NSFetchRequest<Liste> = Liste.fetchRequest()
-        
-        do {
-            listes = try  context.fetch(request)
-        }catch {
-            print("Error fetching data from context ===== \(error) =====")
-        }
-        
-        tableView.reloadData()
     }
     
     func saveFiles() {
@@ -146,7 +125,7 @@ class ListeTableViewController: UITableViewController {
                 
                 let newListe = Liste(context: self.context)
                 
-                newListe.name = textField.text!
+                newListe.listeName = textField.text!
                 
                 self.listes.append(newListe)
                 

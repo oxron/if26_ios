@@ -25,6 +25,10 @@ class TaskTableViewCell: UITableViewCell {
     @IBOutlet weak var deadlineLabel2: UILabel!
     @IBOutlet weak var hourLabel2: UILabel!
     
+    @IBOutlet weak var importantButton3: UIButton!
+    @IBOutlet weak var taskLabel3: UILabel!
+    @IBOutlet weak var deadlineLabel3: UILabel!
+    @IBOutlet weak var hourLabel3: UILabel!
     
     
     
@@ -63,6 +67,17 @@ class TaskTableViewCell: UITableViewCell {
         }else {
             deadlineLabel2.text = ""
             hourLabel2.text = ""
+        }
+    }
+    
+    func setCell3(task : Task){
+        
+        if let date = task.dueDate {
+            deadlineLabel3.text = listDate(date)
+            hourLabel3.text = hourDate(date)
+        }else {
+            deadlineLabel3.text = ""
+            hourLabel3.text = ""
         }
     }
 

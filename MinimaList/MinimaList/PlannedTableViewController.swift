@@ -78,14 +78,16 @@ class PlannedTableViewController: UITableViewController {
             cell.taskLabel2.text = task.name
                cell.setCell2(task: task)
             
-            if task.important == true {
-                
-                cell.importantButton2.isHidden = false
-            }
+           if task.important == true {
+                       
+                       cell.importantButton.isHidden = false
+                   }else if task.important == false{
+                       cell.importantButton.isHidden = true
+                   }
             
                
                if task.done {
-                   cell.backgroundColor = #colorLiteral(red: 0.8320295215, green: 0.9826709628, blue: 0, alpha: 1)
+                   cell.backgroundColor = #colorLiteral(red: 0.0671977813, green: 0.8235294223, blue: 0.0006074571761, alpha: 1)
                } else {
                    cell.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
                }

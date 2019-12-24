@@ -12,11 +12,10 @@ import CoreData
 class TaskDynamicTableViewController: UITableViewController {
     
     var tasks = [Task]()
-   
     var sortedTasks = [Task]()
     var selectedListe: Liste?{
         didSet{
-            loadDataFromStorage()
+            loadTasks()
         }
     }
     
@@ -25,49 +24,13 @@ class TaskDynamicTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadDataFromStorage()
 
-        navigationItem.title = selectedListe?.name
+        navigationItem.title = selectedListe?.listeName
     
     }
 
     //MARK : Data Manipulation Methods
- func loadDataFromStorage(with request: NSFetchRequest<Task> = Task.fetchRequest(), predicate: NSPredicate? = nil) {
-        //here "with" is external and "request" is internal parameter
-        
-        // Item.fetchRequest() has been added later for the function which will work without parameter viewed in viewDidLoad
 
-        let categoryPredicate = NSPredicate(format: "parentListe.name MATCHES %@", selectedListe!.name!)
-        
-        if let additionalPredicate = predicate {
-            
-            request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [categoryPredicate, additionalPredicate])
-            request.returnsObjectsAsFaults = false
-        }
-        else {
-            request.predicate = categoryPredicate
-        }
-        
-        do {
-            tasks = try context.fetch(request)
-        }catch {
-            print("Error fetching data from context ===== \(error) =====")
-        }
-        
-        tableView.reloadData()
-    } 
-    
-    func saveFiles() {
-        
-        do {
-            try context.save()
-        } catch {
-            print("Error saving context \(error)")
-        }
-        
-        self.tableView.reloadData()
-    } 
-    
     override func viewWillAppear(_ animated: Bool) {
         
         loadTasks()
@@ -81,6 +44,8 @@ class TaskDynamicTableViewController: UITableViewController {
     //    Loads Tasks entity from CoreData
     func loadTasks(){
         let request: NSFetchRequest<Task> = Task.fetchRequest()
+        request.returnsObjectsAsFaults = false
+        request.predicate = NSPredicate(format: "liste MATCHES %@", selectedListe!.listeName!)
         
         do {
             tasks = try context.fetch(request)
@@ -90,15 +55,11 @@ class TaskDynamicTableViewController: UITableViewController {
         tableView.reloadData()
     }
     
-   
-    
-    
-   
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
                if sortedTasks.count == 0 {
-                   self.tableView.setEmptyMessage("All tasks are completed")
+                   self.tableView.setEmptyMessage("Toute les tâches sont complétées")
                } else {
                    self.tableView.restore()
                }
@@ -117,10 +78,12 @@ class TaskDynamicTableViewController: UITableViewController {
         if task.important == true {
             
             cell.importantButton.isHidden = false
+        }else if task.important == false{
+            cell.importantButton.isHidden = true
         }
         
         if task.done {
-            cell.backgroundColor = #colorLiteral(red: 0.8320295215, green: 0.9826709628, blue: 0, alpha: 1)
+            cell.backgroundColor = #colorLiteral(red: 0.0671977813, green: 0.8235294223, blue: 0.0006074571761, alpha: 1)
         } else {
             cell.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         }
@@ -129,7 +92,7 @@ class TaskDynamicTableViewController: UITableViewController {
     }
     
    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-            let taskCompletion = sortedTasks[indexPath.row].done ? "Restart" : "Complete"
+            let taskCompletion = sortedTasks[indexPath.row].done ? "Refaire" : "Complete"
             let action = UIContextualAction(style: .normal, title: taskCompletion) { (action, view, completion) in
                 self.sortedTasks[indexPath.row].done = !self.sortedTasks[indexPath.row].done
                 
@@ -163,6 +126,7 @@ class TaskDynamicTableViewController: UITableViewController {
         if let destinationVC = segue.destination as? NewTaskViewController {
             if let indexPath = tableView.indexPathForSelectedRow {
                 destinationVC.selectedTask = sortedTasks[indexPath.row]
+                
             }
         }
             
@@ -172,6 +136,21 @@ class TaskDynamicTableViewController: UITableViewController {
     @IBAction func addTask(_ sender: UIBarButtonItem) {
         
         performSegue(withIdentifier: "toDetail", sender: UITabBarItem.self)
+        
+        let newTask = Task(context: self.context)
+        newTask.parentListe = self.selectedListe
+        self.saveFiles()
+    }
+    
+    func saveFiles() {
+        
+        do {
+            try context.save()
+        } catch {
+            print("Error saving context \(error)")
+        }
+        
+        self.tableView.reloadData()
     }
 
     
@@ -203,50 +182,7 @@ class TaskDynamicTableViewController: UITableViewController {
         
     
     
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+   
 
 }
 }

@@ -9,34 +9,40 @@
 import UIKit
 import CoreData
 
-class NewTaskViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate {
+class NewTaskViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    
 
     @IBOutlet weak var taskTextField: UITextField!
     @IBOutlet weak var importantButton: UISwitch!
     @IBOutlet weak var dueDateTextField: UITextField!
     @IBOutlet weak var noteTextField: UITextField!
+    @IBOutlet weak var pickerTextField: UITextField!
+    
     let datePicker = UIDatePicker()
+    let pickerView = UIPickerView()
     var dueDate : Date?
+    var listeName : String!
     
     var tasks = [Task]()
        
-       var listes = [Liste]()
+    var listes = [Liste]()
        
        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     var selectedTask: Task?
-    
-    var selectedListe: Liste?
   
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         taskTextField.delegate = self
         noteTextField.delegate = self
+        pickerView.delegate = self
         // Do any additional setup after loading the view.
         
         showDatePicker()
+        showListePicker()
         taskTextField.becomeFirstResponder()
         
         if let task = selectedTask {
@@ -53,15 +59,29 @@ class NewTaskViewController: UIViewController, UITextFieldDelegate, UIPickerView
                 datePicker.date = date
                 dueDate = date
             }
-            
+            pickerTextField.text = task.liste
+            listeName = task.liste
             noteTextField.text = task.note
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        let request: NSFetchRequest<Liste> = Liste.fetchRequest()
+        
+        do {
+            listes = try context.fetch(request)
+            pickerView.reloadAllComponents()
+        }catch{
+            print("Error fetching data from context \(error)")
+        }
+    }
     
     
     @IBAction func importantButton(_ sender: Any) {
     }
+    
+    
     @IBAction func saveTask(_ sender: Any) {
         
         if let task = self.selectedTask {
@@ -69,11 +89,12 @@ class NewTaskViewController: UIViewController, UITextFieldDelegate, UIPickerView
                    task.name = taskTextField.text
             if importantButton.isOn == true {
                     task.important = true
-            }else{
+            }else if importantButton.isOn == false{
                     task.important = false
             }
                    task.dueDate = dueDate
                    task.note = noteTextField.text
+                   task.liste = listeName
                } else {
                    let newTask = Task(context: context)
                    
@@ -81,7 +102,7 @@ class NewTaskViewController: UIViewController, UITextFieldDelegate, UIPickerView
                    newTask.important = importantButton.isOn
                    newTask.dueDate = dueDate
                    newTask.note = noteTextField.text
-                  
+                   newTask.liste = listeName
                }
                
                do {
@@ -138,13 +159,62 @@ class NewTaskViewController: UIViewController, UITextFieldDelegate, UIPickerView
         return formatter.string(from: date)
     }
     
+    //    Listes picker
+      func showListePicker() {
+          
+          let toolbar = UIToolbar();
+          toolbar.sizeToFit()
+          let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(cancelListePicker));
+          let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+          
+          toolbar.setItems([spaceButton,doneButton], animated: false)
+          
+          pickerTextField.inputAccessoryView = toolbar
+          pickerTextField.inputView = pickerView
+          
+      }
+      
+      @objc func cancelListePicker(){
+          self.view.endEditing(true)
+      }
+      func numberOfComponents(in pickerView: UIPickerView) -> Int {
+          1
+      }
+      
+      func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+       return listes.count
+      }
+      func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+          return listes[row].listeName
+      }
+      
+      func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+          let liste = listes[row].listeName
+          pickerTextField.text = liste
+          listeName = liste
+          
+      }
+      
+      
+
+       func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+           textField.resignFirstResponder()
+      
+           return true
+       }
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+           if text == "\n"  // Recognizes enter key in keyboard
+           {
+               textView.resignFirstResponder()
+               return false
+           }
+           return true
+       }
+    
 }
 
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-   
-        return true
-    }
+
+
 
 extension UIDatePicker {
 /// Returns the date that reflects the displayed date clamped to the `minuteInterval` of the picker.

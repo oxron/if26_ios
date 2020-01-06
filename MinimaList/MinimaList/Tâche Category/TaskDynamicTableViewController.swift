@@ -139,6 +139,7 @@ class TaskDynamicTableViewController: UITableViewController {
         
         let newTask = Task(context: self.context)
         newTask.parentListe = self.selectedListe
+        navigationItem.title = "Nouvelle tâche"
         self.saveFiles()
     }
     

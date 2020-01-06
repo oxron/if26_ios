@@ -217,7 +217,7 @@
             </objects>
             <point key="canvasLocation" x="1241" y="100"/>
         </scene>
-        <!--New Task View Controller-->
+        <!--Nouvelle tâche-->
         <scene sceneID="wZZ-Aw-p8V">
             <objects>
                 <viewController id="2Ag-vm-PKK" customClass="NewTaskViewController" customModule="Minimalist" customModuleProvider="target" sceneMemberID="viewController">
@@ -314,7 +314,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QhA-n9-OMg"/>
                     </view>
-                    <navigationItem key="navigationItem" id="hFM-2u-hss">
+                    <navigationItem key="navigationItem" title="Nouvelle tâche" id="hFM-2u-hss">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="rB6-Gg-GnJ">
                             <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             <connections>
@@ -626,6 +626,6 @@
         <image name="sun.min" catalog="system" width="64" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ubL-JW-EYk"/>
+        <segue reference="Hic-Qy-DcD"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -36,6 +36,8 @@ class NewTaskViewController: UIViewController, UITextFieldDelegate, UIPickerView
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.title = selectedTask?.name
+        
         taskTextField.delegate = self
         noteTextField.delegate = self
         pickerView.delegate = self
